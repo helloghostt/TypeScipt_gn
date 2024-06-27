@@ -1,1 +1,1 @@
-# TypeScipt_gn
+# TypeScript_gn
