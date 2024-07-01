@@ -1,10 +1,10 @@
-const myFunc = (message:string, title:string, age:number):boolean => {
+const myfunc = (message:string, title:string, age:number):boolean => {
     console.log(message);
     console.log(title);
     console.log(age);
     return true;
-}
-myFunc("Hello world" "myFirstArrowFunction", 30)
+};
+myfunc("Hello world", "myFirstArrowFunc", 30);
 
 
 //표현하는 여러가지 방법인데 각각 알아둘것
@@ -18,4 +18,4 @@ const func2 = () => {
 
 console.log(func()); //func undefined 
 console.log(func1()); // {name: 'dave'}
-console.log(func2());//output 20
+console.log(func2()); //output 20
