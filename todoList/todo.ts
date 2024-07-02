@@ -32,8 +32,11 @@ function deleteTodo(index:number) {
 }
 
 function completeTodo(index:number, todo: Todo) {
+    //1. Todo 타입 변수의 첫번째 객체 전체를 바꿈 //객체 전체를 바꿔서 불변성 유지에 도움이 됨
     todo.done=true;
     todoItems.splice(index, 1, todo);
+    //2. Todo타입 변수의 첫 번째 배열의 요소 중 done 속성만 바꿈
+    todoItems[index -1].done=true; //필요한 요소만 바꿔서 2번이 더 메모리 등 효율 좋음
 }   
 
 function logFirstTodo() : Todo { // 할일 목록에서 첫번째 출력
