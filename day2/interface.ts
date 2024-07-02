@@ -4,6 +4,10 @@ interface Employee {
   isManager: boolean;
   getUniqueID: () => string;
 }
+//인터페이스는 본체가 없다
+
+
+
 const linda: Employee = {
   name: "linda",
   id: 2,

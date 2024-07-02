@@ -3,6 +3,7 @@ namespace InterfaceNamespace {
     name: string;
     getFullName: () => string;
   }
+//인터페이스끼리 상속이 됨
 
   interface Vehicle extends Thing {
     wheelCount: number;

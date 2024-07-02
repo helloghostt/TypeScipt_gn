@@ -1,3 +1,5 @@
+//추상클래스에 대해 알아보자
+
 namespace AbstractNamespace {
   abstract class Vehicle {
     constructor(protected wheelCount: number) {}
