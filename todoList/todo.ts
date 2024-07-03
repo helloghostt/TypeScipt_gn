@@ -1,5 +1,4 @@
-
-type Todo = {id:number, title:string, done:boolean};
+type Todo = {id:number; title:string; done:boolean};
 
 let todoItems:Todo[]; //any로 했다가 Todo[]로 바꿈
 
@@ -36,9 +35,10 @@ function completeTodo(index:number, todo: Todo) {
     todo.done=true;
     todoItems.splice(index, 1, todo);
     //2. Todo타입 변수의 첫 번째 배열의 요소 중 done 속성만 바꿈
-    todoItems[index -1].done=true; //필요한 요소만 바꿔서 2번이 더 메모리 등 효율 좋음
+    //todoItems[index -1].done=true; //필요한 요소만 바꿔서 2번이 더 메모리 등 효율 좋음
 }   
 
+// business logic
 function logFirstTodo() : Todo { // 할일 목록에서 첫번째 출력
     return todoItems[0];
 }
@@ -56,7 +56,7 @@ function addTwoTodoItems(): void {
         id:4,
         title: '아이템 4',
         done: false,
-    }
+    };
     addTodo(item1);
 
     addTodo({
