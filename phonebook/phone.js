@@ -82,3 +82,13 @@ function main() {
 }
 // main 함수 실행
 main().catch(console.error);
+// tsc .\phone.ts --target ES6
+// node .\phone.js
+// Output
+// [
+//     {
+//       name: 'Sally',
+//       address: '456 Elm St',
+//       phones: { office: [Object] }
+//     }
+//   ]
