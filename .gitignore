@@ -12,3 +12,4 @@ day9/*.js
 day10/*.js
 # some/**/a.b
 
+/node_modules/
