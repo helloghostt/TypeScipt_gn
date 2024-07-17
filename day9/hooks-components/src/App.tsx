@@ -1,7 +1,8 @@
-import React, {useReducer, useState} from 'react';
+import React, {useReducer, useState, useCallback} from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Greeting from './GreetingFunctional';
+import ListCreator from './ListCreator';
 
 const reducer =(state:any, action:any) => {
   console.log("enterNameReducer");
@@ -31,15 +32,21 @@ function App() {
         const inc=count+1>startCount ? count+1:
         Number(count+1)+startCount;
         setCount(inc);
-    }, [count, startCount];
+    }, [count, startCount]);
+    const [listItems, setListItems] = useState<Array<ListItem>>();
+    useEffect(()=>{
+      const li=[];
+      for (let i=0; i<count; i++) {
+        li.push({id:i});
+      }
+      setListItems(li);
+    },[count]);
+
     const onWelcomeBtnClick = () => {
       setCountCallback();
     }
-    const onChangeS
-
-
-        
-    })
+    const onChangeStartCount = (e:React.ChangeEvent<HTMLInputElement>) => { setStartCount(Number(e.target.value));     
+    }
     // const onChangeName = (e: React.ChangeEvent<HTMLInputElement>) => {
     //   dispatch({type: "enteredName", payload: e.target.value});
     //   dispatch({type: "message", payload: e.target.value});}
