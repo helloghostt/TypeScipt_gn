@@ -10,9 +10,14 @@ day7/*.js
 day8/*.js
 day9/*.js
 day10/*.js
+day11/*.js
+
+
+
 # some/**/a.b
 
-/node_modules/
+**/node_modules
+
 
 # ignore all .class files
 *.class
