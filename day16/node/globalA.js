@@ -1,0 +1,1 @@
+moduls.exports = () => global.message;
