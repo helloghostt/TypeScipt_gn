@@ -15,11 +15,11 @@ class User extends Sequelize.Model {
         },
         married: {
           type: Sequelize.BOOLEAN,
-          defaultValue: false,
+          allowNull: false,
         },
         comment: {
           type: Sequelize.TEXT,
-          allowNull: true,
+          allowNul: false,
         },
         created_at: {
           type: Sequelize.DATE,
@@ -29,10 +29,9 @@ class User extends Sequelize.Model {
       },
       {
         sequelize,
-        tableName: "user",
         timestamps: false,
-        underscored: false,
         modelName: "User",
+        tableName: "users",
         paranoid: false,
         charset: "utf8",
         collate: "utf8_general_ci",
@@ -43,4 +42,5 @@ class User extends Sequelize.Model {
     db.User.hasMany(db.Comment, { foreignKey: "commenter", sourceKey: "id" });
   }
 }
+
 module.exports = User;

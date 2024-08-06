@@ -43,3 +43,9 @@ bin/*.txt
 doc/**/*.pdf
 
 ./gitignore
+
+#제로초 git clone
+day20/nodebird/
+day22/nodebird/
+
+.env
